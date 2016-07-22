@@ -1,0 +1,49 @@
+{
+  "name": "webpack-react-redux-kit",
+  "version": "1.0.0",
+  "description": "webpack-react-redux-kit",
+  "main": "src/script/index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --history-api-fallback --profile --colors --hot --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js",
+    "clean": "rimraf build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "react-router"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "~0.14.8",
+    "react-dom": "~0.14.8",
+    "react-redux": "^4.4.0",
+    "react-router": "2.x",
+    "redux": "^3.3.1",
+    "redux-thunk": "^0.1.0",
+    "whatwg-fetch": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "~6.0.20",
+    "babel-loader": "~6.0.1",
+    "babel-preset-es2015": "~6.0.15",
+    "babel-preset-react": "~6.0.15",
+    "babel-preset-stage-0": "^6.5.0",
+    "bundle-loader": "^0.5.4",
+    "css-loader": "~0.16.0",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "~0.8.4",
+    "html-webpack-plugin": "^2.10.0",
+    "json-loader": "^0.5.3",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "~0.12.3",
+    "url-loader": "~0.5.6",
+    "webpack": "~1.11.0",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
