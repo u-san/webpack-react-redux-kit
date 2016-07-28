@@ -4,7 +4,19 @@ var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/scripts/index.js',
+  devServer: {
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
+    contentBase: '/',
+    port: 8080,
+    stats: { colors: true }
+  },
+  entry: [
+    'webpack/hot/dev-server',
+    'webpack-dev-server/client?http://localhost:8080',
+    './src/scripts/index.js'
+  ],
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: "[name].js",
