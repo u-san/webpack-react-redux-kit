@@ -6,7 +6,7 @@ import '../styles/main.less'
 
 class App extends React.Component {
 	render() {
-		return <h1>aaaaaaaaaaa</h1>
+		return <h1>aaaaaaabbbbssssaaaa</h1>
 	}
 }
 

@@ -12,16 +12,33 @@ var config = {
   entry: entries,
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: "[name].js",
+    filename: "scripts/[name].min.js",
     chunkFilename: '[chunkhash:8].chunk.min.js',
-    publicPath: '/'
+    publicPath: './'
   },
   module: {
     loaders:[
-      { test: /\.css$/, loader: 'style!css', exclude: /node_modules/ },
-      { test: /\.less$/, loader: 'style!css!less', exclude: /node_modules/ },
-      { test: /\.js[x]?$/, exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015&presets[]=react&presets[]=stage-0' },
-      { test: /\.json$/, loaders: [ 'json' ], exclude: /node_modules/ },
+      { 
+        test: /\.css$/, 
+        loader: 'style!css', 
+        exclude: /node_modules/ 
+      },
+      { test: /\.less$/,
+        loader: 'style!css!less', 
+        exclude: /node_modules/ 
+      },
+      { test: /\.js[x]?$/, 
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015', 'react', 'stage-0'],
+        },
+        exclude: /node_modules/ 
+      },
+      { 
+        test: /\.json$/, 
+        loaders: [ 'json' ], 
+        exclude: /node_modules/ 
+      },
       {
         test: /\.(jpe?g|png|gif)$/i,
         loader: 'url-loader?limit=2&minetype=image/jpg&name=./images/[name]_[hash].[ext]'
