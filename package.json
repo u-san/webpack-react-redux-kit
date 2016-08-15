@@ -4,7 +4,7 @@
   "description": "webpack-react-redux-kit",
   "main": "src/script/index.js",
   "scripts": {
-    "dev": "webpack-dev-server --history-api-fallback --profile --colors --hot --config webpack.config.dev.js",
+    "dev": "webpack-dev-server --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
     "clean": "rimraf build",
     "test": "echo \"Error: no test specified\" && exit 1"

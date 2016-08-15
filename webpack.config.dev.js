@@ -45,6 +45,14 @@ var config = {
       }
     })
   ],
+  devServer: {
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
+    contentBase: '/',
+    port: 8080,
+    stats: { colors: true }
+  },
   devtool : 'source-map'
 };
 
@@ -52,7 +60,7 @@ var config = {
 function getEntries() {
   var jsPath = path.resolve(srcPath, 'scripts');
   var names = fs.readdirSync(jsPath);
-  var map = {};
+  var map ={};
 
   names.forEach(function(name) {
       var m = name.match(/(.+)\.js$/);
