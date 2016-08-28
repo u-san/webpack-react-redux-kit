@@ -89,7 +89,6 @@ function getEntries() {
   return map;
 }
 
- // 自动生成入口文件，入口js名必须和入口文件名相同
 (function getHtml() {
   var pages = fs.readdirSync(srcPath);
 

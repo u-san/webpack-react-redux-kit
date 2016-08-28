@@ -1,5 +1,7 @@
 # webpack-react-redux-kit
 
+## 支持单页及多页应用，入口js名必须和html名相同
+
 ## 1.1 start
 
 ```
